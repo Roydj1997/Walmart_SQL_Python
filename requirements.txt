@@ -1,0 +1,9 @@
+# Python Libraries
+pandas
+
+# Postgre toolkit/librarires
+# Pip install both of them in the terminal
+pymysql # This library s for mysql not postgre
+sqlalchemy 
+psycopg2-binary
+
