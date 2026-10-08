@@ -93,6 +93,91 @@ Here, we utilize Python for data processing and analysis, SQL for advanced query
 
 
 
+## Business Questions
+
+The analysis uses PostgreSQL to answer the following business-focused questions:
+
+1. **Payment Method Analysis**
+   - What are the different payment methods?
+   - How many transactions and how many quantities were sold through each payment method?
+
+2. **Highest-Rated Category by Branch**
+   - Which category has the highest average rating in each branch?
+
+3. **Busiest Day by Branch**
+   - Which day of the week has the highest number of transactions for each branch?
+
+4. **Quantity Sold by Payment Method**
+   - What is the total quantity of items sold through each payment method?
+
+5. **Category Ratings by City**
+   - What are the minimum, maximum, and average ratings for each category in each city?
+
+6. **Category Revenue & Profitability**
+   - What is the total revenue and calculated profit for each category?
+
+7. **Preferred Payment Method by Branch**
+   - What is the most commonly used payment method in each branch?
+
+8. **Sales by Time of Day**
+   - How are transactions distributed across Morning, Afternoon, and Evening for each branch?
+
+9. **Year-over-Year Revenue Decline**
+   - Which five branches experienced the highest revenue decrease ratio when comparing 2023 revenue with 2022 revenue?
+   - 
+
+
+## Tech Stack
+
+- **Programming:** Python
+- **Data Manipulation:** Pandas, NumPy
+- **Database:** PostgreSQL
+- **SQL:** PostgreSQL / SQL
+- **Database Connectivity:** SQLAlchemy, psycopg2
+- **Data Source:** Kaggle API
+- **Environment:** Jupyter Notebook
+
+
+## Project Workflow
+
+Kaggle Dataset
+      ↓
+Kaggle API
+      ↓
+Python / Pandas
+      ↓
+Data Cleaning & Validation
+      ↓
+Feature Engineering
+      ↓
+PostgreSQL
+      ↓
+SQL Business Analysis
+      ↓
+Business Insights
+
+## Data Preparation & Feature Engineering
+
+The raw Walmart sales dataset was prepared using Python before being loaded into PostgreSQL for analysis.
+
+### Data Preparation
+
+- Loaded the dataset using **Pandas**
+- Inspected the dataset structure and data types
+- Checked for missing values and duplicate records
+- Converted columns to appropriate data types
+- Standardized relevant fields for analysis
+- Validated the cleaned dataset before database loading
+
+### Feature Engineering
+
+A new `Total` field was created to represent the total transaction value:
+
+`Total = Unit Price × Quantity`
+
+The cleaned and transformed dataset was then loaded into **PostgreSQL** using **SQLAlchemy** and `psycopg2` for further SQL-based analysis.
+
+
 ## Results and Insights
 
 This section will include your analysis findings:
